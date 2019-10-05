@@ -1,10 +1,5 @@
 <?php
 /**
- * 610-363-4004
- * Load all translations for our plugin from the MO file.
- */
-
-/**
  * Registers all block assets so that they can be enqueued through Gutenberg in
  * the corresponding context.
  *
