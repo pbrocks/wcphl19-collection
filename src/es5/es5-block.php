@@ -27,20 +27,6 @@ License: GPLv2+
  * Register our block and shortcode.
  */
 function es5_block_init() {
-	// Register our block editor script. wcphl19-collection/urvanov-format
-	wp_register_script(
-		'es5-urvanov-format',
-		plugins_url( 'es5-urvanov-format.js', __FILE__ ),
-		array( 'wp-rich-text' ),
-		filemtime( plugin_dir_path( __FILE__ ) . 'es5-urvanov-format.js' )
-	);
-	wp_register_script(
-		'es5-tooltip-format',
-		plugins_url( 'es5-tooltip-format.js', __FILE__ ),
-		array( 'wp-rich-text' ),
-		filemtime( plugin_dir_path( __FILE__ ) . 'es5-tooltip-format.js' )
-	);
-
 	wp_register_script(
 		'es5-block',
 		plugins_url( 'es5-block.js', __FILE__ ),
@@ -74,16 +60,6 @@ function es5_block_init() {
 	add_shortcode( 'es5_block', 'es5_block_render' );
 }
 add_action( 'init', 'es5_block_init' );
-
-/**
- * import { registerFormatType, toggleFormat } from '@wordpress/rich-text';
-import { RichTextToolbarButton } from '@wordpress/block-editor';
- */
-function enqueue_es5_format_script() {
-	wp_enqueue_script( 'es5-format' );
-	wp_enqueue_script( 'es5-urvanov' );
-}
-add_action( 'enqueue_block_editor_assets', 'enqueue_es5_format_script' );
 
 /**
  * Our combined block and shortcode renderer.
