@@ -14,17 +14,8 @@ defined( 'ABSPATH' ) || exit;
 require plugin_dir_path( __FILE__ ) . 'src/index.php';
 
 /**
- * Load all translations for our plugin from the MO file.
- */
-add_action( 'init', 'wcphl19_collection_esnext_load_textdomain' );
-
-function wcphl19_collection_esnext_load_textdomain() {
-	load_plugin_textdomain( 'wcphl19-collection', false, basename( __DIR__ ) . '/languages' );
-}
-
-/**
- * Registers all block assets so that they can be enqueued through Gutenberg in
- * the corresponding context.
+ * Registers all block assets so that they can be enqueued
+ * through Gutenberg in the corresponding context.
  *
  * Passes translations to JavaScript.
  */
@@ -85,4 +76,12 @@ function create_wcphl19_collection_panel( $categories, $post ) {
 	);
 }
 add_filter( 'block_categories', 'create_wcphl19_collection_panel', 10, 2 );
+
+/**
+ * Load all translations for our plugin from the MO file.
+ */
+add_action( 'init', 'wcphl19_collection_esnext_load_textdomain' );
+function wcphl19_collection_esnext_load_textdomain() {
+	load_plugin_textdomain( 'wcphl19-collection', false, basename( __DIR__ ) . '/languages' );
+}
 

@@ -3,20 +3,9 @@ import { __ } from '@wordpress/i18n';
 import { registerBlockType } from '@wordpress/blocks';
 import { RichText } from '@wordpress/block-editor';
 
-// const { registerBlockType } = wp.blocks;
-// const {
-// 	CheckboxControl,
-// 	RadioControl,
-// 	TextControl,
-// 	ToggleControl,
-// 	SelectControl,
-// } = wp.components;
-
 const blockName = 'wcphl19-collection/editable-esnext';
 
 import attributes from './attributes';
-
-// import withInspectorControls from './filter';
 
 registerBlockType( blockName, {
 	title: __( 'Editable (ESNext)', 'wcphl19-collection' ),
