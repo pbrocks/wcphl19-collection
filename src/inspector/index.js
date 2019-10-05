@@ -22,7 +22,7 @@ const blockName = 'wcphl19-collection/inspector-controls';
 registerBlockType( blockName, {
 	title: __( 'Inspector controls (ESNext)', 'wcphl19-collection' ),
 
-	icon: 'universal-access-alt',
+	icon: 'sos',
 
 	category: 'wcphl19-collection',
 

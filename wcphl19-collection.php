@@ -21,7 +21,7 @@ require plugin_dir_path( __FILE__ ) . 'src/index.php';
  */
 function wcphl19_collection_esnext_register_block() {
 	// automatically load dependencies and version
-	$asset_file = include( plugin_dir_path( __FILE__ ) . 'build/index.asset.php' );
+	$asset_file = include plugin_dir_path( __FILE__ ) . 'build/index.asset.php';
 
 	wp_register_script(
 		'wcphl19-collection-esnext',
@@ -32,22 +32,23 @@ function wcphl19_collection_esnext_register_block() {
 
 	wp_register_style(
 		'wcphl19-collection-esnext-editor',
-		plugins_url( 'editor.css', __FILE__ ),
+		plugins_url( 'src/editor.scss', __FILE__ ),
 		array( 'wp-edit-blocks' ),
-		filemtime( plugin_dir_path( __FILE__ ) . 'editor.css' )
+		filemtime( plugin_dir_path( __FILE__ ) . 'src/editor.scss' )
 	);
 
 	wp_register_style(
 		'wcphl19-collection-esnext',
-		plugins_url( 'style.css', __FILE__ ),
+		plugins_url( 'src/style.scss', __FILE__ ),
 		array(),
-		filemtime( plugin_dir_path( __FILE__ ) . 'style.css' )
+		filemtime( plugin_dir_path( __FILE__ ) . 'src/style.scss' )
 	);
 
 	register_block_type(
-		'wcphl19-collection/example-editable-esnext', array(
-			'style' => 'wcphl19-collection-esnext',
-			'editor_style' => 'wcphl19-collection-esnext-editor',
+		'wcphl19-collection/example-editable-esnext',
+		array(
+			'style'         => 'wcphl19-collection-esnext',
+			'editor_style'  => 'wcphl19-collection-esnext-editor',
 			'editor_script' => 'wcphl19-collection-esnext',
 		)
 	);

@@ -193,7 +193,7 @@ __webpack_require__.r(__webpack_exports__);
 var blockName = 'wcphl19-collection/inspector-controls';
 Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])(blockName, {
   title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])('Inspector controls (ESNext)', 'wcphl19-collection'),
-  icon: 'universal-access-alt',
+  icon: 'sos',
   category: 'wcphl19-collection',
   attributes: {
     checkboxField: {
