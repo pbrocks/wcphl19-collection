@@ -19,3 +19,7 @@ Collection of WordPress Gutenberg items pulled from the Handbook and assembled i
 ## Select a block from the WCPHL19 Panel
 
 ![Panel](https://github.com/pbrocks/wcphl19-collection/blob/master/lib/images/panel-in-block-selector.gif)
+
+## To add styles to your build process
+
+As mentioned in the talk, CSS is not compiled by wp-scripts yet, but a workaround was suggested by Jeffrey Carandang in his post [How to Create Gutenberg Block Plugin using wp-scripts with PostCSS Build Process](https://jeffreycarandang.com/create-gutenberg-block-plugin-wp-scripts-postcss-build/). I've incorporated his suggestions in the `postcss` branch to illustrate how it can work.
