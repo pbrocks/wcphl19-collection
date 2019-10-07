@@ -3,6 +3,7 @@
 ## WCPHL19 Slides
 
 [Slides from WordCamp Philadelphia 2019](https://pbrocks.com/wordcamp-phl-2019/)
+![Slides from WordCamp Philadelphia 2019](https://github.com/pbrocks/wcphl19-collection/blob/master/lib/images/WCPHL2019–slides.png)
 
 Collection of WordPress Gutenberg items pulled from the Handbook and assembled in a plugin using `wp-scripts` to compile. There are examples of blocks using ES5 and ES6.
 
